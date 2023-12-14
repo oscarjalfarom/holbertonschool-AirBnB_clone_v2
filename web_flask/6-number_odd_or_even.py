@@ -45,12 +45,13 @@ def hbnb_5(n):
 
 @app.route('/number_odd_or_even/<int:n>', strict_slashes=False)
 def hbnb_6(n):
+    """ Function that displays HTML page """
     aux = ""
     if n % 2 == 0:
         aux = 'even'
     else:
         aux = 'odd'
-    
+
     return (render_template('6-number_odd_or_even.html', n=n, aux=aux))
 
 if __name__ == '__main__':
